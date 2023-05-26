@@ -6,3 +6,8 @@
 # 5 -> 1 0 1 1 0
 # 2
 
+Coins = int(input())
+
+Eagle = 0
+Tails = 0 
+
