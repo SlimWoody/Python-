@@ -6,8 +6,22 @@
 # 5 -> 1 0 1 1 0
 # 2
 
-Coins = int(input())
+import random
+coinsN = int(input('Введите кол-во монет: '))
 
-Eagle = 0
-Tails = 0 
+eagle1 = 0
+tails0 = 0 
 
+for i in range(coinsN):
+    i = random.randint(0, 1)
+    if i == 0:
+        tails0 += 1
+    else:
+        eagle1 += 1
+    print(i, end=' ')
+    
+
+if tails0 > eagle1:
+    print(f'-> перевернуть на решку {eagle1} монет')
+else:
+    print(f'-> перевернуть на орла {tails0} монеты')
