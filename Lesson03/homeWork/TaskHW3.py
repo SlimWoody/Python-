@@ -19,3 +19,14 @@
 # Будем считать, что на вход подается только одно слово, которое содержит либо только
 # английские, либо только русские буквы.
 
+dictionary = {'AEIOULNSTRАВЕИНОРСТ': 1, 'DGДКЛМПУ':2,'BCMPБГЁЬЯ':3,'FHVWYЙЫ':4, 'KЖЗХЦЧ':5, 'JXШЭЮ':8, 'QZФЩЪ':10}
+word = input('Введите слово: ').upper()
+sum = 0
+
+for i in dictionary.items():
+    for j in word:
+        if j in i[0]:
+            sum = sum + i[1]
+
+print(sum)
+
