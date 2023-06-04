@@ -9,3 +9,14 @@
 #     6
 #     -> 5
 
+import random
+n = int(input('Введите колличество элементов в списке: '))
+list_1 = [random.randint(1, 9) for _ in range (n)]
+print (*list_1)
+x = int(input('Введите число для поиска ближайшего из списка: '))
+nearest_x = list_1[0]
+
+for i in list_1:
+    if abs(x-i) < abs(x-nearest_x):
+        nearest_x=i
+print(nearest_x)
